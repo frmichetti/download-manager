@@ -1,10 +1,10 @@
 /**
  *
- * @author frmichetti
- * <Felipe Rodrigues Michetti at http://portfolio-frmichetti.rhcloud.com/>
- *
- */
-package downloadmanager.console;
+ * @author Felipe Rodrigues Michetti
+ * @see http://portfolio-frmichetti.rhcloud.com
+ * @see mailto:frmichetti@gmail.com
+ * */
+package frmichetti.com.downloadmanager.console;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -19,12 +19,12 @@ import javax.swing.ListSelectionModel;
 import javax.swing.SwingUtilities;
 import javax.swing.event.ListSelectionEvent;
 
-import downloadmanager.logic.Download;
-import downloadmanager.logic.DownloadsTableModel;
-import downloadmanager.logic.ProgressRenderer;
-import downloadmanager.logic.Serialize;
-import downloadmanager.util.CheckUrl;
-import downloadmanager.util.Size;
+import frmichetti.com.downloadmanager.logic.Download;
+import frmichetti.com.downloadmanager.logic.DownloadsTableModel;
+import frmichetti.com.downloadmanager.logic.ProgressRenderer;
+import frmichetti.com.downloadmanager.logic.Serialize;
+import frmichetti.com.downloadmanager.util.CheckUrl;
+import frmichetti.com.downloadmanager.util.Size;
 
 
 public class DownloadManager extends javax.swing.JFrame implements Observer, Runnable {
