@@ -15,4 +15,19 @@
 		<url>http://portfolio-frmichetti.rhcloud.com/</url>
 	</organization>
 	<url>http://portfolio-frmichetti.rhcloud.com/</url>
+	<build>
+   <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-jar-plugin</artifactId>
+      <configuration>
+        <archive>
+          <manifest>
+            <mainClass>frmichetti.com.downloadmanager.GerenciadorDownload</mainClass>
+          </manifest>
+        </archive>
+      </configuration>
+    </plugin>
+  </plugins>
+  </build>
 </project>
