@@ -6,20 +6,19 @@
  * */
 package frmichetti.com.downloadmanager;
 
-import java.lang.reflect.InvocationTargetException;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 
 import frmichetti.com.downloadmanager.console.DownloadManager;
 
-public class GerenciadorDownload {
+public class Start {
 
-    public GerenciadorDownload() {
-        aplicarAparencia();
-        criarJanelas();
+    public Start() {
+        doChangeTheme();
+        doCreateFrame();
     }
 
-    private static void aplicarAparencia() {
+    private static void doChangeTheme() {
 
         try {
             for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
@@ -30,25 +29,20 @@ public class GerenciadorDownload {
                 }
             }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            System.err.println("NÃ£o foi Possivel Definir o Tema Nimbus : " + ex.getMessage());
+            System.err.println("Não foi Possivel Definir o Tema Nimbus : " + ex);
         }
 
     }
 
-    public static void main(String args[]) {
-        aplicarAparencia();
-        criarJanelas();
-
+    public static void main(String ... args) {
+        doChangeTheme();
+        doCreateFrame();
     }
 
-    private static void criarJanelas() {
-        try {
-            SwingUtilities.invokeAndWait(() -> {
-                new DownloadManager();
-            });
-        } catch (InterruptedException | InvocationTargetException ex) {
-            System.err.println("ExcessÃ£o : " + ex.getMessage());
-        }
+    private static void doCreateFrame() {
+        SwingUtilities.invokeLater((() -> {
+	    new DownloadManager();
+	}));
     }
 
 }

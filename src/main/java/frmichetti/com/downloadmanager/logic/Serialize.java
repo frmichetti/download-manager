@@ -24,8 +24,8 @@ public abstract class Serialize {
             ooS.flush();
 
         } catch (IOException ex) {
-            System.out.println("Erro de IO : " + ex.getMessage());
-            JOptionPane.showMessageDialog(null, ex.getMessage(), "Erro de IO", JOptionPane.ERROR_MESSAGE);
+            System.out.println("Erro de IO : " + ex);
+            JOptionPane.showMessageDialog(null, ex, "Erro de IO", JOptionPane.ERROR_MESSAGE);
             return false;
         }
 
@@ -42,8 +42,8 @@ public abstract class Serialize {
                 System.out.println(oiS.toString());
 
             } catch (IOException | ClassNotFoundException ex) {
-                System.out.println("Excessão : " + ex.getMessage());
-                JOptionPane.showMessageDialog(null, ex.getMessage(), "Erro de IO", JOptionPane.ERROR_MESSAGE);
+                System.out.println("Excessão : " + ex);
+                JOptionPane.showMessageDialog(null, ex, "Erro de IO", JOptionPane.ERROR_MESSAGE);
             }
             return downloadList;
         } else {
