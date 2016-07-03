@@ -4,7 +4,7 @@
  * @see http://portfolio-frmichetti.rhcloud.com
  * @see mailto:frmichetti@gmail.com
  * */
-package frmichetti.com.downloadmanager.logic;
+package br.com.frmichetti.downloadmanager.logic;
 
 import java.io.File;
 import java.io.FileInputStream;

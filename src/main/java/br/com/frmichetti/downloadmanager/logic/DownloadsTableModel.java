@@ -4,7 +4,7 @@
  * @see http://portfolio-frmichetti.rhcloud.com
  * @see mailto:frmichetti@gmail.com
  * */
-package frmichetti.com.downloadmanager.logic;
+package br.com.frmichetti.downloadmanager.logic;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ import java.util.Observer;
 import javax.swing.JProgressBar;
 import javax.swing.table.AbstractTableModel;
 
-import frmichetti.com.downloadmanager.util.BitsBytes;
+import br.com.frmichetti.downloadmanager.util.BitsBytes;
 
 
 public class DownloadsTableModel extends AbstractTableModel implements Observer {

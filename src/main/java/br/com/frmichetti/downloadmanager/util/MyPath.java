@@ -4,7 +4,7 @@
  * @see http://portfolio-frmichetti.rhcloud.com
  * @see mailto:frmichetti@gmail.com
  * */
-package frmichetti.com.downloadmanager.util;
+package br.com.frmichetti.downloadmanager.util;
 
 import java.net.URI;
 import java.net.URISyntaxException;

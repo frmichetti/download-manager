@@ -4,7 +4,7 @@
  * @see http://portfolio-frmichetti.rhcloud.com
  * @see mailto:frmichetti@gmail.com
  * */
-package frmichetti.com.downloadmanager.logic;
+package br.com.frmichetti.downloadmanager.logic;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -21,7 +21,7 @@ import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 import java.util.Observable;
 import javax.swing.JOptionPane;
 
-import frmichetti.com.downloadmanager.console.DownloadManager;
+import br.com.frmichetti.downloadmanager.console.DownloadManager;
 
 public class Download extends Observable implements Runnable, Serializable {
 

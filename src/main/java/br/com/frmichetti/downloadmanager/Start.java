@@ -4,12 +4,12 @@
  * @see http://portfolio-frmichetti.rhcloud.com
  * @see mailto:frmichetti@gmail.com
  * */
-package frmichetti.com.downloadmanager;
+package br.com.frmichetti.downloadmanager;
 
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 
-import frmichetti.com.downloadmanager.console.DownloadManager;
+import br.com.frmichetti.downloadmanager.console.DownloadManager;
 
 public class Start {
 

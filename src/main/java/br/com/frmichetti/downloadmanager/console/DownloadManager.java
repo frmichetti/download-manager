@@ -4,7 +4,7 @@
  * @see http://portfolio-frmichetti.rhcloud.com
  * @see mailto:frmichetti@gmail.com
  * */
-package frmichetti.com.downloadmanager.console;
+package br.com.frmichetti.downloadmanager.console;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -23,12 +23,12 @@ import javax.swing.JProgressBar;
 import javax.swing.ListSelectionModel;
 import javax.swing.SwingUtilities;
 
-import frmichetti.com.downloadmanager.logic.Download;
-import frmichetti.com.downloadmanager.logic.DownloadsTableModel;
-import frmichetti.com.downloadmanager.logic.ProgressRenderer;
-import frmichetti.com.downloadmanager.logic.Serialize;
-import frmichetti.com.downloadmanager.util.CheckUrl;
-import frmichetti.com.downloadmanager.util.Size;
+import br.com.frmichetti.downloadmanager.logic.Download;
+import br.com.frmichetti.downloadmanager.logic.DownloadsTableModel;
+import br.com.frmichetti.downloadmanager.logic.ProgressRenderer;
+import br.com.frmichetti.downloadmanager.logic.Serialize;
+import br.com.frmichetti.downloadmanager.util.CheckUrl;
+import br.com.frmichetti.downloadmanager.util.Size;
 
 
 public class DownloadManager extends javax.swing.JFrame implements Observer, Runnable {
