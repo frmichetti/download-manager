@@ -36,7 +36,7 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>frmichetti.com.downloadmanager.Start</mainClass>
+							<mainClass>br.com.codecode.downloadmanager.Start</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
