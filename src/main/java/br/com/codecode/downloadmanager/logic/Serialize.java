@@ -15,8 +15,19 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Serialize.
+ */
 public abstract class Serialize {
 
+    /**
+     * Writeobject.
+     *
+     * @param downloadList the download list
+     * @param path the path
+     * @return true, if successful
+     */
     public static boolean writeobject(ArrayList<Download> downloadList, File path) {
 
         try (ObjectOutputStream ooS = new ObjectOutputStream(new FileOutputStream(path))) {
@@ -32,6 +43,12 @@ public abstract class Serialize {
         return true;
     }
 
+    /**
+     * Read object.
+     *
+     * @param path the path
+     * @return the array list
+     */
     public static ArrayList<Download> readObject(File path) {
         if (path.exists()) {
             

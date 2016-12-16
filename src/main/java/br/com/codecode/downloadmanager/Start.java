@@ -5,13 +5,32 @@ import javax.swing.UIManager;
 
 import br.com.codecode.downloadmanager.console.DownloadManager;
 
+
+/**
+ * The Class Start.
+ */
 public class Start {
 
+    /**
+     * Instantiates a new start.
+     */
     public Start() {
         doChangeTheme();
         doCreateFrame();
     }
 
+    /**
+     * The main method.
+     *
+     * @param args the arguments
+     */
+    public static void main(String ... args) {
+        new Start();
+    }
+
+    /**
+     * Do change theme.
+     */
     private void doChangeTheme() {
 
         try {
@@ -28,10 +47,9 @@ public class Start {
 
     }
 
-    public static void main(String ... args) {
-        new Start();
-    }
-
+    /**
+     * Do create frame.
+     */
     private void doCreateFrame() {
         SwingUtilities.invokeLater((() -> {
 	    new DownloadManager();

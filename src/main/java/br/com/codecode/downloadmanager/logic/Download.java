@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package br.com.codecode.downloadmanager.logic;
 
 import java.io.File;
@@ -17,22 +20,39 @@ import javax.swing.JOptionPane;
 
 import br.com.codecode.downloadmanager.console.DownloadManager;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Download.
+ */
 public class Download extends Observable implements Runnable, Serializable {
 
+    /** The Constant serialVersionUID. */
     private static final long serialVersionUID = 2765560011215318296L;
 
+    /** The Constant MAX_BUFFER_SIZE. */
     private transient static final int MAX_BUFFER_SIZE = 1024;
 
+    /** The url. */
     private final URL url;
     
+    /** The size. */
     private int size;
     
+    /** The downloaded. */
     private int downloaded;
     
+    /** The status. */
     private Status status;
     
+    /** The path. */
     private transient final Path path;
 
+    /**
+     * Instantiates a new download.
+     *
+     * @param url the url
+     * @param path the path
+     */
     public Download(URL url, Path path) {
 	this.url = url;
 	this.size = -1;
@@ -41,47 +61,90 @@ public class Download extends Observable implements Runnable, Serializable {
 	this.path = path;
     }
 
+    /**
+     * Gets the url.
+     *
+     * @return the url
+     */
     public String getUrl() {
 	return url.toString();
     }
 
+    /**
+     * Gets the progress.
+     *
+     * @return the progress
+     */
     public float getProgress() {
 	return ((float) downloaded / size) * 100;
     }
 
+    /**
+     * Gets the size.
+     *
+     * @return the size
+     */
     public int getSize() {
 	return size;
     }
 
+    /**
+     * Gets the status.
+     *
+     * @return the status
+     */
     public Status getStatus() {
 	return status;
     }
 
+    /**
+     * Gets the path.
+     *
+     * @return the path
+     */
     public Path getPath() {
 	return path;
     }
 
+    /**
+     * Download.
+     */
     public void download() {
 	Thread thread = new Thread(DownloadManager.tgroup, this);
 	thread.start();
     }
 
+    /**
+     * Pause.
+     */
     public void pause() {
 	status = Status.Pausado;
 	stateChanged();
     }
 
+    /**
+     * Resume.
+     */
     public void resume() {
 	status = Status.Baixando;
 	stateChanged();
 	download();
     }
 
+    /**
+     * Cancel.
+     */
     public void cancel() {
 	status = Status.Cancelado;
 	stateChanged();
     }
 
+    /**
+     * Error.
+     *
+     * @param error the error
+     * @return the string
+     */
     public String error(String error) {
 	status = Status.Falha;
 	stateChanged();
@@ -89,21 +152,36 @@ public class Download extends Observable implements Runnable, Serializable {
 	return error;
     }
 
+    /**
+     * Restart.
+     */
     public void restart() {
 	cancel();
 	resume();
     }
 
+    /**
+     * Gets the file name.
+     *
+     * @param url the url
+     * @return the file name
+     */
     private String getFileName(URL url) {
 	String fileName = url.getFile();
 	return fileName.substring(fileName.lastIndexOf('/') + 1);
     }
 
+    /**
+     * State changed.
+     */
     private void stateChanged() {
 	setChanged();
 	notifyObservers();
     }
 
+    /**
+     * Download task.
+     */
     private void downloadTask() {
 	//STEP CONNECTION --------------------------------------     
 	HttpURLConnection connection = null;
@@ -222,11 +300,17 @@ public class Download extends Observable implements Runnable, Serializable {
 
     }
 
+    /* (non-Javadoc)
+     * @see java.lang.Runnable#run()
+     */
     @Override
     public void run() {
 	downloadTask();
     }
 
+    /* (non-Javadoc)
+     * @see java.lang.Object#toString()
+     */
     @Override
     public String toString() {
 	return "Download{" + "url=" + url + ", size=" + size + ", downloaded=" + downloaded + ", status=" + status + ", path=" + path + '}';

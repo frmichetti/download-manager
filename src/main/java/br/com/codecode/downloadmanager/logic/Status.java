@@ -6,8 +6,18 @@
  * */
 package br.com.codecode.downloadmanager.logic;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Enum Status.
+ */
 public enum Status {
 
-    Baixando, Pausado, Completo, Cancelado, Falha, Adicionado;
+    /** The Baixando. */
+    Baixando, /** The Pausado. */
+ Pausado, /** The Completo. */
+ Completo, /** The Cancelado. */
+ Cancelado, /** The Falha. */
+ Falha, /** The Adicionado. */
+ Adicionado;
 
 }

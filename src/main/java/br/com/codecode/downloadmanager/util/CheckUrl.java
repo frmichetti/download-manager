@@ -3,8 +3,23 @@ package br.com.codecode.downloadmanager.util;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public abstract class CheckUrl {
+/**
+ * The Class CheckUrl.
+ */
+public class CheckUrl {    
+    
+    /**
+     * Instantiates a new check url.
+     */
+    private CheckUrl(){}
 
+    /**
+     * Verify URL.
+     *
+     * @param url the url
+     * @return the url
+     * @throws MalformedURLException the malformed URL exception
+     */
     public static URL verifyURL(String url) throws MalformedURLException {
 
         if (!url.toLowerCase().startsWith("http://") && !url.toLowerCase().startsWith("ftp://") && !url.toLowerCase().startsWith("https://") && !url.toLowerCase().startsWith("ftps://")) {
